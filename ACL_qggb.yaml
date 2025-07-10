@@ -15,7 +15,6 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: x1vless, server: x1.z9c0.top, port: 54990, client-fingerprint: chrome, type: vless, uuid: 62584cbb-bef5-464a-f90b-edcacf779742, tls: true, tfo: false, skip-cert-verify: false, servername: x1.z9c0.top, network: tcp}
   - {name: x2vless, server: x2.z9c0.top, port: 37128, client-fingerprint: chrome, type: vless, uuid: f0002ce1-ba0d-453a-f37d-438009d96135, tls: true, tfo: false, skip-cert-verify: false, servername: x2.z9c0.top, network: tcp}
 proxy-groups:
   - name: 🚀 节点选择
@@ -23,7 +22,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - x1vless
       - x2vless
   - name: ♻️ 自动选择
     type: url-test
@@ -31,7 +29,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - x1vless
       - x2vless
   - name: 🌍 国外媒体
     type: select
@@ -39,7 +36,6 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - x1vless
       - x2vless
   - name: 📢 谷歌FCM
     type: select
@@ -47,28 +43,24 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - x1vless
       - x2vless
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - x1vless
       - x2vless
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - x1vless
       - x2vless
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - x1vless
       - x2vless
   - name: 🎯 全球直连
     type: select
@@ -97,7 +89,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - x1vless
       - x2vless
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
